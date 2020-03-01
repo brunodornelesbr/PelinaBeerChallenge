@@ -1,0 +1,596 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3F43E97229276B7B11961FEC /* Pods_PelinaBeerChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE9F7B1CB55D15CFA88E723 /* Pods_PelinaBeerChallenge.framework */; };
+		9A3ED4DE240C380200730A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4DD240C380200730A58 /* AppDelegate.swift */; };
+		9A3ED4E0240C380200730A58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4DF240C380200730A58 /* SceneDelegate.swift */; };
+		9A3ED4E2240C380200730A58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E1240C380200730A58 /* ViewController.swift */; };
+		9A3ED4E5240C380200730A58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E3240C380200730A58 /* Main.storyboard */; };
+		9A3ED4E7240C380600730A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E6240C380600730A58 /* Assets.xcassets */; };
+		9A3ED4EA240C380600730A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E8240C380600730A58 /* LaunchScreen.storyboard */; };
+		9A3ED4F5240C380600730A58 /* PelinaBeerChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4F4240C380600730A58 /* PelinaBeerChallengeTests.swift */; };
+		EB944738F2EA6E40B6AD8497 /* Pods_PelinaBeerChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719E8C98026F8E209C926D9D /* Pods_PelinaBeerChallengeTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		9A3ED4F1240C380600730A58 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9A3ED4D2240C380200730A58 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9A3ED4D9240C380200730A58;
+			remoteInfo = PelinaBeerChallenge;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		14DD92859463EFD10159B0EE /* Pods-PelinaBeerChallengeTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallengeTests.release.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallengeTests/Pods-PelinaBeerChallengeTests.release.xcconfig"; sourceTree = "<group>"; };
+		2AE9F7B1CB55D15CFA88E723 /* Pods_PelinaBeerChallenge.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PelinaBeerChallenge.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		719E8C98026F8E209C926D9D /* Pods_PelinaBeerChallengeTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PelinaBeerChallengeTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3ED4DA240C380200730A58 /* PelinaBeerChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PelinaBeerChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3ED4DD240C380200730A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		9A3ED4DF240C380200730A58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9A3ED4E1240C380200730A58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9A3ED4E4240C380200730A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9A3ED4E6240C380600730A58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		9A3ED4E9240C380600730A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9A3ED4EB240C380600730A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9A3ED4F0240C380600730A58 /* PelinaBeerChallengeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PelinaBeerChallengeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3ED4F4240C380600730A58 /* PelinaBeerChallengeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PelinaBeerChallengeTests.swift; sourceTree = "<group>"; };
+		9A3ED4F6240C380600730A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A33D8FC58C078191675446B6 /* Pods-PelinaBeerChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallenge.debug.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge.debug.xcconfig"; sourceTree = "<group>"; };
+		B06B3D01414931158EE2B71F /* Pods-PelinaBeerChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallenge.release.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge.release.xcconfig"; sourceTree = "<group>"; };
+		DFF86644EF1724D73A2C9919 /* Pods-PelinaBeerChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallengeTests/Pods-PelinaBeerChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		9A3ED4D7240C380200730A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3F43E97229276B7B11961FEC /* Pods_PelinaBeerChallenge.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A3ED4ED240C380600730A58 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB944738F2EA6E40B6AD8497 /* Pods_PelinaBeerChallengeTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93D45D42D2057BF63CFFBCAC /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A33D8FC58C078191675446B6 /* Pods-PelinaBeerChallenge.debug.xcconfig */,
+				B06B3D01414931158EE2B71F /* Pods-PelinaBeerChallenge.release.xcconfig */,
+				DFF86644EF1724D73A2C9919 /* Pods-PelinaBeerChallengeTests.debug.xcconfig */,
+				14DD92859463EFD10159B0EE /* Pods-PelinaBeerChallengeTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		9A3ED4D1240C380200730A58 = {
+			isa = PBXGroup;
+			children = (
+				9A3ED4DC240C380200730A58 /* PelinaBeerChallenge */,
+				9A3ED4F3240C380600730A58 /* PelinaBeerChallengeTests */,
+				9A3ED4DB240C380200730A58 /* Products */,
+				93D45D42D2057BF63CFFBCAC /* Pods */,
+				CF923FFD17BDB195AD75329E /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		9A3ED4DB240C380200730A58 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9A3ED4DA240C380200730A58 /* PelinaBeerChallenge.app */,
+				9A3ED4F0240C380600730A58 /* PelinaBeerChallengeTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A3ED4DC240C380200730A58 /* PelinaBeerChallenge */ = {
+			isa = PBXGroup;
+			children = (
+				9A3ED4DD240C380200730A58 /* AppDelegate.swift */,
+				9A3ED4DF240C380200730A58 /* SceneDelegate.swift */,
+				9A3ED4E1240C380200730A58 /* ViewController.swift */,
+				9A3ED4E3240C380200730A58 /* Main.storyboard */,
+				9A3ED4E6240C380600730A58 /* Assets.xcassets */,
+				9A3ED4E8240C380600730A58 /* LaunchScreen.storyboard */,
+				9A3ED4EB240C380600730A58 /* Info.plist */,
+			);
+			path = PelinaBeerChallenge;
+			sourceTree = "<group>";
+		};
+		9A3ED4F3240C380600730A58 /* PelinaBeerChallengeTests */ = {
+			isa = PBXGroup;
+			children = (
+				9A3ED4F4240C380600730A58 /* PelinaBeerChallengeTests.swift */,
+				9A3ED4F6240C380600730A58 /* Info.plist */,
+			);
+			path = PelinaBeerChallengeTests;
+			sourceTree = "<group>";
+		};
+		CF923FFD17BDB195AD75329E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2AE9F7B1CB55D15CFA88E723 /* Pods_PelinaBeerChallenge.framework */,
+				719E8C98026F8E209C926D9D /* Pods_PelinaBeerChallengeTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		9A3ED4D9240C380200730A58 /* PelinaBeerChallenge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A3ED4F9240C380600730A58 /* Build configuration list for PBXNativeTarget "PelinaBeerChallenge" */;
+			buildPhases = (
+				60809E5A6C3D460C3EA0CF8F /* [CP] Check Pods Manifest.lock */,
+				9A3ED4D6240C380200730A58 /* Sources */,
+				9A3ED4D7240C380200730A58 /* Frameworks */,
+				9A3ED4D8240C380200730A58 /* Resources */,
+				F532F6BE821AFE18B13BC2D2 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PelinaBeerChallenge;
+			productName = PelinaBeerChallenge;
+			productReference = 9A3ED4DA240C380200730A58 /* PelinaBeerChallenge.app */;
+			productType = "com.apple.product-type.application";
+		};
+		9A3ED4EF240C380600730A58 /* PelinaBeerChallengeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9A3ED4FC240C380600730A58 /* Build configuration list for PBXNativeTarget "PelinaBeerChallengeTests" */;
+			buildPhases = (
+				5A80BBFBE4680793F33D9F00 /* [CP] Check Pods Manifest.lock */,
+				9A3ED4EC240C380600730A58 /* Sources */,
+				9A3ED4ED240C380600730A58 /* Frameworks */,
+				9A3ED4EE240C380600730A58 /* Resources */,
+				0076E0874B81CCFEFE42ED88 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9A3ED4F2240C380600730A58 /* PBXTargetDependency */,
+			);
+			name = PelinaBeerChallengeTests;
+			productName = PelinaBeerChallengeTests;
+			productReference = 9A3ED4F0240C380600730A58 /* PelinaBeerChallengeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		9A3ED4D2240C380200730A58 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Bruno Dorneles";
+				TargetAttributes = {
+					9A3ED4D9240C380200730A58 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					9A3ED4EF240C380600730A58 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 9A3ED4D9240C380200730A58;
+					};
+				};
+			};
+			buildConfigurationList = 9A3ED4D5240C380200730A58 /* Build configuration list for PBXProject "PelinaBeerChallenge" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 9A3ED4D1240C380200730A58;
+			productRefGroup = 9A3ED4DB240C380200730A58 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				9A3ED4D9240C380200730A58 /* PelinaBeerChallenge */,
+				9A3ED4EF240C380600730A58 /* PelinaBeerChallengeTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9A3ED4D8240C380200730A58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3ED4EA240C380600730A58 /* LaunchScreen.storyboard in Resources */,
+				9A3ED4E7240C380600730A58 /* Assets.xcassets in Resources */,
+				9A3ED4E5240C380200730A58 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A3ED4EE240C380600730A58 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0076E0874B81CCFEFE42ED88 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PelinaBeerChallengeTests/Pods-PelinaBeerChallengeTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PelinaBeerChallengeTests/Pods-PelinaBeerChallengeTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PelinaBeerChallengeTests/Pods-PelinaBeerChallengeTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5A80BBFBE4680793F33D9F00 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PelinaBeerChallengeTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60809E5A6C3D460C3EA0CF8F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PelinaBeerChallenge-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F532F6BE821AFE18B13BC2D2 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		9A3ED4D6240C380200730A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3ED4E2240C380200730A58 /* ViewController.swift in Sources */,
+				9A3ED4DE240C380200730A58 /* AppDelegate.swift in Sources */,
+				9A3ED4E0240C380200730A58 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9A3ED4EC240C380600730A58 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9A3ED4F5240C380600730A58 /* PelinaBeerChallengeTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		9A3ED4F2240C380600730A58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9A3ED4D9240C380200730A58 /* PelinaBeerChallenge */;
+			targetProxy = 9A3ED4F1240C380600730A58 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		9A3ED4E3240C380200730A58 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A3ED4E4240C380200730A58 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9A3ED4E8240C380600730A58 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9A3ED4E9240C380600730A58 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		9A3ED4F7240C380600730A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		9A3ED4F8240C380600730A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9A3ED4FA240C380600730A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A33D8FC58C078191675446B6 /* Pods-PelinaBeerChallenge.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 536GDVGJ68;
+				INFOPLIST_FILE = PelinaBeerChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BrunoDorneles.PelinaBeerChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		9A3ED4FB240C380600730A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B06B3D01414931158EE2B71F /* Pods-PelinaBeerChallenge.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 536GDVGJ68;
+				INFOPLIST_FILE = PelinaBeerChallenge/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BrunoDorneles.PelinaBeerChallenge;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		9A3ED4FD240C380600730A58 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DFF86644EF1724D73A2C9919 /* Pods-PelinaBeerChallengeTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 536GDVGJ68;
+				INFOPLIST_FILE = PelinaBeerChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BrunoDorneles.PelinaBeerChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PelinaBeerChallenge.app/PelinaBeerChallenge";
+			};
+			name = Debug;
+		};
+		9A3ED4FE240C380600730A58 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14DD92859463EFD10159B0EE /* Pods-PelinaBeerChallengeTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 536GDVGJ68;
+				INFOPLIST_FILE = PelinaBeerChallengeTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = BrunoDorneles.PelinaBeerChallengeTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PelinaBeerChallenge.app/PelinaBeerChallenge";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		9A3ED4D5240C380200730A58 /* Build configuration list for PBXProject "PelinaBeerChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3ED4F7240C380600730A58 /* Debug */,
+				9A3ED4F8240C380600730A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A3ED4F9240C380600730A58 /* Build configuration list for PBXNativeTarget "PelinaBeerChallenge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3ED4FA240C380600730A58 /* Debug */,
+				9A3ED4FB240C380600730A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		9A3ED4FC240C380600730A58 /* Build configuration list for PBXNativeTarget "PelinaBeerChallengeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9A3ED4FD240C380600730A58 /* Debug */,
+				9A3ED4FE240C380600730A58 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 9A3ED4D2240C380200730A58 /* Project object */;
+}
