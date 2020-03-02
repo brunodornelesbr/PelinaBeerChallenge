@@ -17,6 +17,7 @@ class DetailsMovieViewController: UIViewController {
     @IBOutlet weak var aboutTextView: UITextView!
     @IBOutlet weak var backdropImage: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
     var model : DetailMovieViewModel!
     var bag = DisposeBag()
@@ -40,5 +41,18 @@ class DetailsMovieViewController: UIViewController {
             }
             self.backdropImage.af_setImage(withURL: backdropURL, placeholderImage: ImageConstants.placeholderImage, filter: nil, imageTransition: UIImageView.ImageTransition.crossDissolve(0.2))
             }).disposed(by: bag)
+        
+        model.isFavorite.asDriver().drive(onNext : {[weak self]
+            value in
+            guard let self = self else {return}
+            let buttonImage = value ? #imageLiteral(resourceName: "baseline_favorite_black_24pt") :  #imageLiteral(resourceName: "baseline_favorite_border_black_24pt")
+            self.favoriteButton.setImage(buttonImage, for: .normal)
+            }).disposed(by: bag)
+        
+        favoriteButton.rx.tap.asDriver().drive(onNext : {[weak self]
+            _ in
+            guard let self = self else {return}
+            self.model.didToggleFavorite()
+        })
     }
 }

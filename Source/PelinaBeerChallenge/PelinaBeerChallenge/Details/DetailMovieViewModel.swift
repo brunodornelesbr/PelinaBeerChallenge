@@ -11,7 +11,23 @@ import RxCocoa
 import RxSwift
 class DetailMovieViewModel {
     var movie = BehaviorRelay<Movie>(value : Movie())
-    init(movie : Movie) {
+    var favoriteManager : FavoriteManager
+    var isFavorite = BehaviorRelay<Bool>(value: false)
+    init(movie : Movie,favoriteManager : FavoriteManager) {
         self.movie.accept(movie)
+        self.favoriteManager = favoriteManager
+        updateFavorite()
+    }
+    func updateFavorite() {
+        isFavorite.accept(favoriteManager.isThisFavorite(movie: movie.value))
+    }
+    
+    func checkIfIsFavorite(movie : Movie) -> Bool{
+        return favoriteManager.isThisFavorite(movie: movie)
+    }
+    
+    func didToggleFavorite(){
+        self.favoriteManager.toggleFavorite(movie: movie.value)
+        updateFavorite()
     }
 }
