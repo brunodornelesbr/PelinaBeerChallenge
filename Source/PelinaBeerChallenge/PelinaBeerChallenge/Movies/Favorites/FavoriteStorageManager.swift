@@ -8,7 +8,6 @@
 
 import UIKit
 
-
 protocol FavoriteStorageManagerProtocol {
      func getListOfFavorites()-> [Movie]
      func updateListOfFavorites(movies : [Movie])
