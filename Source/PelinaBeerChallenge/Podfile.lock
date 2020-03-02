@@ -8,6 +8,11 @@ PODS:
   - Nimble (8.0.4)
   - ObjectMapper (3.5.1)
   - Quick (2.2.0)
+  - Realm (4.3.2):
+    - Realm/Headers (= 4.3.2)
+  - Realm/Headers (4.3.2)
+  - RealmSwift (4.3.2):
+    - Realm (= 4.3.2)
   - RxCocoa (5.0.1):
     - RxRelay (~> 5)
     - RxSwift (~> 5)
@@ -21,6 +26,7 @@ DEPENDENCIES:
   - AlamofireObjectMapper
   - Nimble
   - Quick
+  - RealmSwift
   - RxCocoa
   - RxSwift
 
@@ -32,6 +38,8 @@ SPEC REPOS:
     - Nimble
     - ObjectMapper
     - Quick
+    - Realm
+    - RealmSwift
     - RxCocoa
     - RxRelay
     - RxSwift
@@ -43,10 +51,12 @@ SPEC CHECKSUMS:
   Nimble: 18d5360282923225d62b09d781f63abc1a0111fc
   ObjectMapper: 70187b8941977c62ccfb423caf6b50be405cabf0
   Quick: 7fb19e13be07b5dfb3b90d4f9824c855a11af40e
+  Realm: 5e92902e2875dff4bb0fd02f67bb737c3d5db2bc
+  RealmSwift: 9a360fc7bae04fc2e308a34fbd899d5faa2d6b22
   RxCocoa: e741b9749968e8a143e2b787f1dfbff2b63d0a5c
   RxRelay: 89d54507f4fd4d969e6ec1d4bd7f3673640b4640
   RxSwift: e2dc62b366a3adf6a0be44ba9f405efd4c94e0c4
 
-PODFILE CHECKSUM: dafa5f3a0f5dac8096daa32f9b12a16bdae70b99
+PODFILE CHECKSUM: 91437d972dc85d532b44dafc6fde0462a17df9a2
 
 COCOAPODS: 1.8.4

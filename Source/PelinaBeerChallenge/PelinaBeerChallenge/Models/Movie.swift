@@ -8,8 +8,7 @@
 
 import UIKit
 import ObjectMapper
-
-class Movie: Mappable {
+class Movie: Mappable, Codable {
     
     var id  = -1
     var original_title = ""
@@ -47,5 +46,13 @@ class Movie: Mappable {
           let urlString = String(format:APIConstants.imageUrl,path)
           return URL(string: urlString)
       }
+    
+}
+
+extension Movie : Equatable {
+    static func == (lhs: Movie, rhs: Movie) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
     
 }
