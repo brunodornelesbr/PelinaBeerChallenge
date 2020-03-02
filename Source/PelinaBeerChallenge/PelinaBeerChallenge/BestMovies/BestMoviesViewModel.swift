@@ -15,9 +15,11 @@ class BestMoviesViewModel: NSObject {
     var movies : Observable<[Movie]> {return availableMovies.asObservable()}
     var network : MoviesNetwork
     var favoriteManager : FavoriteManager
-    init(network : MoviesNetwork,favoriteManager : FavoriteManager) {
+    weak var coordinator : MoviesCoordinator?
+    init(network : MoviesNetwork,favoriteManager : FavoriteManager, coordinator : MoviesCoordinator) {
         self.network = network
         self.favoriteManager = favoriteManager
+        self.coordinator = coordinator
         super.init()
     }
     func resetMovies() {
@@ -52,7 +54,7 @@ class BestMoviesViewModel: NSObject {
     
     func didSelectMovieAt(indexPath : IndexPath){
         let movie = availableMovies.value[indexPath.row]
-        // router.routeToDetailsMovie(movie : movie)
+        coordinator?.showDetails(movie:movie)
     }
     
     func checkIfIsFavorite(movie : Movie) -> Bool{

@@ -19,7 +19,7 @@ class MainCoordinator {
     
      init(controller: UITabBarController) {
         self.controller = controller
-        bestMoviesCoordinator = BestMoviesCoordinator(navigationController: UINavigationController())
+        bestMoviesCoordinator = MoviesCoordinator(navigationController: UINavigationController())
         bestMoviesCoordinator.start()
         var controllers : [UIViewController] = []
         let bestMoviesRootViewController = bestMoviesCoordinator.navigationController

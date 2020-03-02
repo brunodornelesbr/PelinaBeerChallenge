@@ -8,7 +8,7 @@
 
 import UIKit
 
-class BestMoviesCoordinator: Coordinator {
+class MoviesCoordinator: Coordinator {
     var childCoordinators: [Coordinator]
     
     var navigationController: UINavigationController
@@ -23,12 +23,16 @@ class BestMoviesCoordinator: Coordinator {
         let network = NetworkHandlerImpl()
         let bestMoviesNetwork = BestMoviesNetworkImpl(networkHandler: network)
         let storageManager = FavoriteStorageManagerImpl()
-        let viewModel = BestMoviesViewModel(network: bestMoviesNetwork, favoriteManager: FavoriteManager(storageManager: storageManager))
+        let viewModel = BestMoviesViewModel(network: bestMoviesNetwork, favoriteManager: FavoriteManager(storageManager: storageManager), coordinator: self)
         vc.viewModel = viewModel
-        
         navigationController.pushViewController(vc, animated: false)
-        
     }
     
+    func showDetails(movie : Movie) {
+        let vc = instantiateInitialVCFromStoryboard(storyboardName: "DetailsMovie") as! DetailsMovieViewController
+        let viewModel = DetailMovieViewModel(movie: movie)
+        vc.model = viewModel
+        navigationController.pushViewController(vc, animated: true)
+    }
 
 }
