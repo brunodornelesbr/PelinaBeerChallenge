@@ -11,6 +11,7 @@ target 'PelinaBeerChallenge' do
  pod 'Alamofire'
  pod 'AlamofireImage'
  pod 'AlamofireObjectMapper'
+ pod 'RealmSwift'
   target 'PelinaBeerChallengeTests' do
     inherit! :search_paths
     # Pods for testing

@@ -10,8 +10,15 @@ import UIKit
 
 protocol MoviesNetwork {
     func getMovies(completionHandler : @escaping ([Movie],Error?)->())
+    func resetMovies()
 }
 class BestMoviesNetworkImpl: MoviesNetwork {
+    func resetMovies() {
+        currentPage = 0
+        maxPages = Int.max
+        requesting = false
+    }
+    
     
     private var currentPage = 0
     private var maxPages = Int.max
@@ -23,8 +30,10 @@ class BestMoviesNetworkImpl: MoviesNetwork {
     }
     
     func getMovies(completionHandler: @escaping ([Movie], Error?) -> ()) {
-        guard currentPage < maxPages,requesting == false else {completionHandler([],NetworkError.networkBusy)
-            return}
+        guard currentPage < maxPages,requesting == false else {
+            completionHandler([],NetworkError.networkBusy)
+            return
+        }
         currentPage = currentPage + 1
         let url =  APIConstants.bestMoviesUrl
         let params : [String:Any] = ["page":currentPage,"api_key":APIConstants.apikey]
@@ -32,8 +41,10 @@ class BestMoviesNetworkImpl: MoviesNetwork {
         networkHandler.request(url, method: .get, params: params, type: BestMoviesRequestObject.self) { [weak self]
             value,error in
             self?.requesting = false
-            guard error == nil,let value = value  else {completionHandler([],error)
-                return}
+            guard error == nil,let value = value  else {
+                completionHandler([],error)
+                return
+            }
             self?.maxPages = value.totalPages
             completionHandler(value.movieList,nil)
         }

@@ -22,7 +22,8 @@ class BestMoviesCoordinator: Coordinator {
         let vc = instantiateInitialVCFromStoryboard(storyboardName: "BestMovies") as! BestMoviesViewController
         let network = NetworkHandlerImpl()
         let bestMoviesNetwork = BestMoviesNetworkImpl(networkHandler: network)
-        let viewModel = BestMoviesViewModel(network: bestMoviesNetwork)
+        let storageManager = FavoriteStorageManagerImpl()
+        let viewModel = BestMoviesViewModel(network: bestMoviesNetwork, favoriteManager: FavoriteManager(storageManager: storageManager))
         vc.viewModel = viewModel
         
         navigationController.pushViewController(vc, animated: false)

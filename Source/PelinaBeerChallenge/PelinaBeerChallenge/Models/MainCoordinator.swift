@@ -10,10 +10,11 @@ import UIKit
 
 class MainCoordinator {
     var bestMoviesCoordinator : Coordinator
+    var favoritesCoordinator : Coordinator
     var controller: UITabBarController
     
     var coordinators: [Coordinator] {
-        return [bestMoviesCoordinator]
+        return [bestMoviesCoordinator,favoritesCoordinator]
     }
     
      init(controller: UITabBarController) {
@@ -23,8 +24,13 @@ class MainCoordinator {
         var controllers : [UIViewController] = []
         let bestMoviesRootViewController = bestMoviesCoordinator.navigationController
         bestMoviesRootViewController.tabBarItem = UITabBarItem(title: "Best movies", image: #imageLiteral(resourceName: "baseline_local_movies_black_24pt"), tag: 0)
-        controllers.append(bestMoviesRootViewController)
         
+        favoritesCoordinator = FavoritesCoordinator(navigationController: UINavigationController())
+        favoritesCoordinator.start()
+        let favoriteRootViewController = favoritesCoordinator.navigationController
+        favoriteRootViewController.tabBarItem = UITabBarItem(title: "Favorites", image: #imageLiteral(resourceName: "baseline_favorite_black_24pt"), tag: 1)
+        controllers.append(bestMoviesRootViewController)
+        controllers.append(favoriteRootViewController)
         controller.viewControllers = controllers
         
     }
