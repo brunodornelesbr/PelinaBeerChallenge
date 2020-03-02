@@ -60,12 +60,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2z1-qV-Wnn">
+                                <rect key="frame" x="380" y="242" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="RH7-Pr-jUC"/>
+                                    <constraint firstAttribute="width" constant="24" id="edT-4C-DjQ"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="baseline_favorite_black_24pt"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="IX3-vh-VPb" firstAttribute="bottom" secondItem="tSv-PD-Vsf" secondAttribute="bottom" constant="-15" id="1Qr-0i-90i"/>
                             <constraint firstItem="WOn-uv-tYz" firstAttribute="top" secondItem="5lj-yE-4Wk" secondAttribute="bottom" constant="5" id="1p3-27-tsK"/>
                             <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="5lj-yE-4Wk" secondAttribute="trailing" id="2eO-ma-t29"/>
+                            <constraint firstItem="2z1-qV-Wnn" firstAttribute="top" secondItem="hQN-8e-nXK" secondAttribute="bottom" constant="8" id="5Bh-1n-mN0"/>
                             <constraint firstItem="WOn-uv-tYz" firstAttribute="leading" secondItem="hcQ-Di-T48" secondAttribute="leading" constant="10" id="7gx-EK-xAe"/>
                             <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="WOn-uv-tYz" secondAttribute="trailing" constant="10" id="8M1-2T-d7I"/>
                             <constraint firstItem="07c-YF-KJv" firstAttribute="top" secondItem="hQN-8e-nXK" secondAttribute="bottom" constant="20" id="8QF-RQ-X0x"/>
@@ -80,6 +90,7 @@
                             <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="IX3-vh-VPb" secondAttribute="trailing" id="Vlk-qc-AYW"/>
                             <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="hQN-8e-nXK" secondAttribute="trailing" id="WTP-Cg-apu"/>
                             <constraint firstItem="IX3-vh-VPb" firstAttribute="leading" secondItem="tSv-PD-Vsf" secondAttribute="leading" constant="15" id="YGm-y8-nG1"/>
+                            <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="2z1-qV-Wnn" secondAttribute="trailing" constant="10" id="ZBB-Zy-xPc"/>
                             <constraint firstItem="tSv-PD-Vsf" firstAttribute="bottom" secondItem="hQN-8e-nXK" secondAttribute="bottom" id="bRK-yj-p8U"/>
                             <constraint firstItem="tSv-PD-Vsf" firstAttribute="trailing" secondItem="hQN-8e-nXK" secondAttribute="trailing" id="eTV-Ir-41m"/>
                             <constraint firstItem="hcQ-Di-T48" firstAttribute="trailing" secondItem="4Ph-rn-L1n" secondAttribute="trailing" constant="10" id="hrn-UV-HcF"/>
@@ -93,6 +104,7 @@
                         <outlet property="aboutTextView" destination="WOn-uv-tYz" id="AMN-9z-QVi"/>
                         <outlet property="backdropEffect" destination="tSv-PD-Vsf" id="1wy-NK-RY7"/>
                         <outlet property="backdropImage" destination="hQN-8e-nXK" id="WhX-nc-Ois"/>
+                        <outlet property="favoriteButton" destination="2z1-qV-Wnn" id="CMv-MY-cIK"/>
                         <outlet property="genreLabel" destination="07c-YF-KJv" id="MYe-Ku-Jdg"/>
                         <outlet property="movieTitle" destination="IX3-vh-VPb" id="s1K-8C-mGv"/>
                         <outlet property="releaseDateLabel" destination="4Ph-rn-L1n" id="2O8-PO-dr3"/>
@@ -104,6 +116,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="baseline_favorite_black_24pt" width="24" height="24"/>
         <image name="no-image" width="940" height="600"/>
     </resources>
 </document>
