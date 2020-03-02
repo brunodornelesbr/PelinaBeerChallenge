@@ -55,10 +55,6 @@ class BestMoviesViewModel: NSObject {
         getMovies()
     }
     
-    func errorThreatment(error: Error){
-        //      self.errorMessageToDisplay.accept(error.localizedDescription)
-    }
-    
     func didSelectMovieAt(indexPath : IndexPath){
         let movie = availableMovies.value[indexPath.row]
         coordinator?.showDetails(movie:movie)
