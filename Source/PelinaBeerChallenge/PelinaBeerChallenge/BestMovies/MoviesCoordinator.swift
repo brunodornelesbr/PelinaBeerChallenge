@@ -9,13 +9,10 @@
 import UIKit
 
 class MoviesCoordinator: Coordinator {
-    var childCoordinators: [Coordinator]
-    
     var navigationController: UINavigationController
     
     required init(navigationController: UINavigationController) {
         self.navigationController = navigationController
-        childCoordinators = []
     }
     
     func start() {
