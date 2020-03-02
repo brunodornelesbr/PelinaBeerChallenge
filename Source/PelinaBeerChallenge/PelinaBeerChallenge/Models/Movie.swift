@@ -9,7 +9,6 @@
 import UIKit
 import ObjectMapper
 class Movie: Mappable, Codable {
-    
     var id  = -1
     var original_title = ""
     var posterPath : String?

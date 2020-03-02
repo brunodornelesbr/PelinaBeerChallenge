@@ -10,7 +10,6 @@
 		3F43E97229276B7B11961FEC /* Pods_PelinaBeerChallenge.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AE9F7B1CB55D15CFA88E723 /* Pods_PelinaBeerChallenge.framework */; };
 		9A3ED4DE240C380200730A58 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4DD240C380200730A58 /* AppDelegate.swift */; };
 		9A3ED4E0240C380200730A58 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4DF240C380200730A58 /* SceneDelegate.swift */; };
-		9A3ED4E2240C380200730A58 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E1240C380200730A58 /* ViewController.swift */; };
 		9A3ED4E7240C380600730A58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E6240C380600730A58 /* Assets.xcassets */; };
 		9A3ED4EA240C380600730A58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3ED4E8240C380600730A58 /* LaunchScreen.storyboard */; };
 		9A3ED4F5240C380600730A58 /* PelinaBeerChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED4F4240C380600730A58 /* PelinaBeerChallengeTests.swift */; };
@@ -55,7 +54,6 @@
 		9A3ED4DA240C380200730A58 /* PelinaBeerChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PelinaBeerChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3ED4DD240C380200730A58 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9A3ED4DF240C380200730A58 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9A3ED4E1240C380200730A58 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9A3ED4E6240C380600730A58 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A3ED4E9240C380600730A58 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A3ED4EB240C380600730A58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,7 +144,6 @@
 				9A3ED50D240C53E500730A58 /* Extensions */,
 				9A3ED4EB240C380600730A58 /* Info.plist */,
 				9A3ED4FF240C4DC300730A58 /* AppFiles */,
-				9A3ED4E1240C380200730A58 /* ViewController.swift */,
 				9A3ED514240C547C00730A58 /* Network */,
 				9A3ED50A240C537C00730A58 /* Models */,
 				9A3ED500240C4E2D00730A58 /* BestMovies */,
@@ -444,7 +441,6 @@
 			files = (
 				9A3ED523240C6D5600730A58 /* Coordinator.swift in Sources */,
 				9A3ED53F240D730600730A58 /* FavoritesCoordinator.swift in Sources */,
-				9A3ED4E2240C380200730A58 /* ViewController.swift in Sources */,
 				9A3ED504240C4EED00730A58 /* BestMoviesViewController.swift in Sources */,
 				9A3ED519240C571400730A58 /* BestMoviesViewModel.swift in Sources */,
 				9A3ED525240C6E8200730A58 /* BestMoviesCoordinator.swift in Sources */,

@@ -23,11 +23,9 @@ class FavoritesNetwork: MoviesNetwork {
         if didGetMovies {
             completionHandler([],nil)
         } else {
-        completionHandler(favoriteManager.listOfFavorites,nil)
+            completionHandler(favoriteManager.listOfFavorites,nil)
             didGetMovies = true
         }
         return
     }
-    
-
 }

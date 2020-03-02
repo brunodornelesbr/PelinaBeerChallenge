@@ -11,8 +11,7 @@ import UIKit
 class FavoritesCoordinator: BestMoviesCoordinator {
     override func start() {
          let vc = instantiateInitialVCFromStoryboard(storyboardName: "BestMovies") as! BestMoviesViewController
-         let network = NetworkHandlerImpl()
-       
+         vc.title = "Favorites"
          let storageManager = FavoriteStorageManagerImpl()
          let favoriteManager = FavoriteManager(storageManager: storageManager)
          let bestMoviesNetwork = FavoritesNetwork(favoriteManager: favoriteManager)

@@ -21,20 +21,20 @@ class BestMoviesViewModel: NSObject {
         super.init()
     }
     func resetMovies() {
-         network.resetMovies()
+        network.resetMovies()
         availableMovies.accept([])
         favoriteManager.loadFavorites()
-        getUpcomingMovies()
+        getMovies()
     }
     
-    func getUpcomingMovies(){
+    func getMovies(){
         if requesting.value == false {
-        requesting.accept(true)
-        network.getMovies {[weak self] value, error in
-            guard let self = self else {return}
-            self.requesting.accept(false)
-            self.addNewMoviesToTheList(newMovies: value)
-        }
+            requesting.accept(true)
+            network.getMovies {[weak self] value, error in
+                guard let self = self else {return}
+                self.requesting.accept(false)
+                self.addNewMoviesToTheList(newMovies: value)
+            }
         }
     }
     func addNewMoviesToTheList(newMovies : [Movie]) {
@@ -43,7 +43,7 @@ class BestMoviesViewModel: NSObject {
         self.availableMovies.accept(addNewMovies)
     }
     func requestMoreItems() {
-        getUpcomingMovies()
+        getMovies()
     }
     
     func errorThreatment(error: Error){

@@ -14,7 +14,7 @@ class MainCoordinator {
     var controller: UITabBarController
     
     var coordinators: [Coordinator] {
-        return [bestMoviesCoordinator]
+        return [bestMoviesCoordinator,favoritesCoordinator]
     }
     
      init(controller: UITabBarController) {
