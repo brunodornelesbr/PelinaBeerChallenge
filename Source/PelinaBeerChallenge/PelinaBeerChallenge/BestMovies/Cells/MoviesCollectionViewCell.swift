@@ -11,6 +11,7 @@ import AlamofireImage
 class MoviesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var posterLabel: UILabel!
+    @IBOutlet weak var favoriteButton: UIButton!
     
         static var reuseId = "MoviesCollectionViewCell"
         static var nibName = "MoviesCollectionViewCell"
@@ -22,5 +23,10 @@ class MoviesCollectionViewCell: UICollectionViewCell {
             }
             posterImageView.af_setImage(withURL: posterURL, placeholderImage: ImageConstants.placeholderImage, filter: nil, imageTransition: UIImageView.ImageTransition.crossDissolve(0.2))
            }
+    
+    func setFavorite(_ value : Bool) {
+        let buttonImage = value ? #imageLiteral(resourceName: "baseline_favorite_black_24pt") :  #imageLiteral(resourceName: "baseline_favorite_border_black_24pt")
+        favoriteButton.setImage(buttonImage, for: .normal)
+    }
     }
 

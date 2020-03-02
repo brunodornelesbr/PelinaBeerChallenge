@@ -14,8 +14,10 @@ class BestMoviesViewModel: NSObject {
     private var requesting = BehaviorRelay<Bool>(value: false)
     var movies : Observable<[Movie]> {return availableMovies.asObservable()}
     var network : MoviesNetwork
-    init(network : MoviesNetwork) {
+    var favoriteManager : FavoriteManager
+    init(network : MoviesNetwork,favoriteManager : FavoriteManager) {
         self.network = network
+        self.favoriteManager = favoriteManager
         super.init()
     }
     
@@ -43,5 +45,18 @@ class BestMoviesViewModel: NSObject {
     func didSelectMovieAt(indexPath : IndexPath){
         let movie = availableMovies.value[indexPath.row]
         // router.routeToDetailsMovie(movie : movie)
+    }
+    
+    func checkIfIsFavorite(movie : Movie) -> Bool{
+        return favoriteManager.isThisFavorite(movie: movie)
+    }
+    
+    func didToggleFavorite(movie : Movie){
+        self.favoriteManager.toggleFavorite(movie: movie)
+    }
+    
+    func indexPathFor(movie : Movie) -> IndexPath {
+        let row = availableMovies.value.firstIndex(of: movie) ?? 0
+        return IndexPath(row: row, section: 0)
     }
 }

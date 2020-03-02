@@ -28,15 +28,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="27j-hU-7Ku">
+                                <rect key="frame" x="103" y="98.5" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="YDy-1x-1Z4"/>
+                                    <constraint firstAttribute="width" constant="24" id="iVF-dk-Drn"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="linkColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" image="baseline_favorite_black_24pt"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Uqo-rF-lKr" firstAttribute="top" secondItem="Gwz-ao-LX7" secondAttribute="bottom" constant="5" id="7QA-Sc-0RX"/>
+                            <constraint firstItem="Uqo-rF-lKr" firstAttribute="top" secondItem="27j-hU-7Ku" secondAttribute="bottom" constant="5" id="FuJ-iF-okm"/>
                             <constraint firstAttribute="bottom" secondItem="Uqo-rF-lKr" secondAttribute="bottom" constant="5" id="JwS-IE-Mkj"/>
                             <constraint firstItem="Uqo-rF-lKr" firstAttribute="leading" secondItem="mC9-cF-Onq" secondAttribute="leading" constant="5" id="RWt-am-WL0"/>
                             <constraint firstItem="Gwz-ao-LX7" firstAttribute="height" secondItem="mC9-cF-Onq" secondAttribute="height" multiplier="0.6" id="col-M0-35F"/>
                             <constraint firstAttribute="trailing" secondItem="Uqo-rF-lKr" secondAttribute="trailing" constant="5" id="dgS-gW-aRD"/>
                             <constraint firstItem="Gwz-ao-LX7" firstAttribute="top" secondItem="mC9-cF-Onq" secondAttribute="top" constant="5" id="jLO-Ue-ghe"/>
+                            <constraint firstAttribute="trailing" secondItem="27j-hU-7Ku" secondAttribute="trailing" constant="5" id="qwj-6b-Taa"/>
                             <constraint firstAttribute="trailing" secondItem="Gwz-ao-LX7" secondAttribute="trailing" constant="5" id="rP1-DQ-pof"/>
                             <constraint firstItem="Gwz-ao-LX7" firstAttribute="leading" secondItem="mC9-cF-Onq" secondAttribute="leading" constant="5" id="uh9-K1-u9V"/>
                         </constraints>
@@ -51,6 +62,7 @@
             </collectionViewCellContentView>
             <size key="customSize" width="132" height="196"/>
             <connections>
+                <outlet property="favoriteButton" destination="27j-hU-7Ku" id="9wU-Bc-8d1"/>
                 <outlet property="posterImageView" destination="Gwz-ao-LX7" id="5bz-Ta-KIB"/>
                 <outlet property="posterLabel" destination="Uqo-rF-lKr" id="DNY-wV-uYz"/>
             </connections>
@@ -58,6 +70,7 @@
         </collectionViewCell>
     </objects>
     <resources>
+        <image name="baseline_favorite_black_24pt" width="24" height="24"/>
         <image name="no-image" width="940" height="600"/>
     </resources>
 </document>
