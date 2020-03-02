@@ -12,9 +12,11 @@ import RxCocoa
 class BestMoviesViewController: UIViewController {
     @IBOutlet weak var moviesCollectionView: UICollectionView!
     var bag = DisposeBag()
+    let spacing: CGFloat = 10.0
+    var viewModel : BestMoviesViewModel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        collectionViewRxSetup()
         // Do any additional setup after loading the view.
     }
     
@@ -24,7 +26,7 @@ class BestMoviesViewController: UIViewController {
        
     func collectionViewRxSetup() {
         let layout = UICollectionViewFlowLayout()
-        let spacing: CGFloat = 10.0
+       
         
         layout.sectionInset = UIEdgeInsets(top: spacing, left: spacing, bottom: spacing, right: spacing)
         layout.minimumLineSpacing = spacing
@@ -32,16 +34,36 @@ class BestMoviesViewController: UIViewController {
         moviesCollectionView.collectionViewLayout = layout
         
         moviesCollectionView.register(UINib(nibName: MoviesCollectionViewCell.nibName, bundle: nil), forCellWithReuseIdentifier: MoviesCollectionViewCell.reuseId)
-     
+         moviesCollectionView.rx.setDelegate(self).disposed(by: bag)
+            moviesCollectionView.rx.contentOffset.map{
+                offset in
+                return self.moviesCollectionView.isNearBottomEdge(edgeOffset: 30)
+            }.filter{
+                return $0
+            }.throttle(1, latest: false, scheduler: MainScheduler.instance)
+                .subscribe({[weak self] _ in
+                    self?.viewModel.requestMoreItems()
+                }).disposed(by: bag)
+            
+            viewModel.movies.bind(to: moviesCollectionView.rx.items(cellIdentifier: MoviesCollectionViewCell.reuseId,cellType: MoviesCollectionViewCell.self)){
+                index,model,cell in
+                cell.bindTo(movie: model)
+            }.disposed(by: bag)
+            
+            moviesCollectionView.rx.itemSelected.subscribe(onNext: {[weak self] value in
+                self?.viewModel.didSelectMovieAt(indexPath : value)
+                }).disposed(by: bag)
     }
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+}
+
+
+extension BestMoviesViewController : UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numberOfItemsPerRow: CGFloat = 2
+        let spacingBetweenCells: CGFloat = spacing
+        let totalSpacing = (2 * spacing) + ((numberOfItemsPerRow - 1) * spacingBetweenCells)
+        let width = (collectionView.bounds.width - totalSpacing)/numberOfItemsPerRow
+        return CGSize(width: width, height: 1.2*width)
     }
-    */
-
 }
