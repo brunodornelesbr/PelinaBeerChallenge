@@ -37,6 +37,7 @@
 		9A3ED544240D869400730A58 /* DetailsMovie.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A3ED543240D869400730A58 /* DetailsMovie.storyboard */; };
 		9A3ED546240D86A300730A58 /* DetailsMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED545240D86A300730A58 /* DetailsMovieViewController.swift */; };
 		9A3ED548240D86C600730A58 /* DetailMovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A3ED547240D86C600730A58 /* DetailMovieViewModel.swift */; };
+		9A7A965C240D9A2A00766451 /* MovieFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7A965B240D9A2A00766451 /* MovieFilter.swift */; };
 		EB944738F2EA6E40B6AD8497 /* Pods_PelinaBeerChallengeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 719E8C98026F8E209C926D9D /* Pods_PelinaBeerChallengeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -87,6 +88,7 @@
 		9A3ED543240D869400730A58 /* DetailsMovie.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DetailsMovie.storyboard; sourceTree = "<group>"; };
 		9A3ED545240D86A300730A58 /* DetailsMovieViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsMovieViewController.swift; sourceTree = "<group>"; };
 		9A3ED547240D86C600730A58 /* DetailMovieViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailMovieViewModel.swift; sourceTree = "<group>"; };
+		9A7A965B240D9A2A00766451 /* MovieFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieFilter.swift; sourceTree = "<group>"; };
 		A33D8FC58C078191675446B6 /* Pods-PelinaBeerChallenge.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallenge.debug.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge.debug.xcconfig"; sourceTree = "<group>"; };
 		B06B3D01414931158EE2B71F /* Pods-PelinaBeerChallenge.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallenge.release.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallenge/Pods-PelinaBeerChallenge.release.xcconfig"; sourceTree = "<group>"; };
 		DFF86644EF1724D73A2C9919 /* Pods-PelinaBeerChallengeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PelinaBeerChallengeTests.debug.xcconfig"; path = "Target Support Files/Pods-PelinaBeerChallengeTests/Pods-PelinaBeerChallengeTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				9A3ED50B240C53CB00730A58 /* Movie.swift */,
+				9A7A965B240D9A2A00766451 /* MovieFilter.swift */,
 				9A3ED528240CA2A400730A58 /* FavoriteManager.swift */,
 				9A3ED53C240D670E00730A58 /* FavoriteStorageManager.swift */,
 				9A3ED522240C6D5600730A58 /* Coordinator.swift */,
@@ -467,6 +470,7 @@
 				9A3ED50C240C53CB00730A58 /* Movie.swift in Sources */,
 				9A3ED50F240C53F100730A58 /* DateFormatter+Extension.swift in Sources */,
 				9A3ED527240C6F3400730A58 /* MainCoordinator.swift in Sources */,
+				9A7A965C240D9A2A00766451 /* MovieFilter.swift in Sources */,
 				9A3ED4DE240C380200730A58 /* AppDelegate.swift in Sources */,
 				9A3ED513240C547900730A58 /* APIConstants.swift in Sources */,
 				9A3ED51F240C628A00730A58 /* BestMoviesRequestObject.swift in Sources */,

@@ -17,10 +17,22 @@ class BestMoviesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionViewRxSetup()
-        // Do any additional setup after loading the view.
-    }
+        var segmentControl = UISegmentedControl()
+        let titles = viewModel.options.value.map{ value in
+            return value.rawValue
+            }
+        segmentControl = UISegmentedControl(items: titles)
+        segmentControl.sizeToFit()
+        segmentControl.selectedSegmentIndex = 0
+        navigationItem.titleView = segmentControl
+        
+        segmentControl.rx.selectedSegmentIndex.asDriver().drive(onNext : {[weak self] value in
+            guard let self = self else {return}
+            self.viewModel.didSelect(segmentControlIndex: value)
+            
+            }).disposed(by: bag)
+        }
 
-    
     override func viewWillAppear(_ animated: Bool) {
            self.navigationController?.navigationBar.prefersLargeTitles = true
           viewModel.resetMovies()
