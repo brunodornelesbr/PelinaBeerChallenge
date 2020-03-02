@@ -79,7 +79,7 @@ class BestMoviesViewController: UIViewController {
                 self.viewModel.didToggleFavorite(movie: model)
                 self.moviesCollectionView.reloadItems(at: [self.viewModel.indexPathFor(movie: model)])
             }).disposed(by: cell.disposeBag)
-        }.disposed(by: bag)
+        }
         
         moviesCollectionView.rx.itemSelected.subscribe(onNext: {[weak self] value in
             self?.viewModel.didSelectMovieAt(indexPath : value)
