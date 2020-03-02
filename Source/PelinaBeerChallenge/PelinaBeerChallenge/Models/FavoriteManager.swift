@@ -13,7 +13,10 @@ class FavoriteManager {
     var storageManager : FavoriteStorageManagerProtocol
     init(storageManager : FavoriteStorageManagerProtocol) {
         self.storageManager = storageManager
-        listOfFavorites = storageManager.getListOfFavorites()
+        loadFavorites()
+    }
+    func loadFavorites() {
+          listOfFavorites = storageManager.getListOfFavorites()
     }
     
    private func updateListOfFavoritesWithFavoritesList() {

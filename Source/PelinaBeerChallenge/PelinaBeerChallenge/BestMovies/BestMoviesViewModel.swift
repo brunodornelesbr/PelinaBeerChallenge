@@ -20,13 +20,21 @@ class BestMoviesViewModel: NSObject {
         self.favoriteManager = favoriteManager
         super.init()
     }
+    func resetMovies() {
+         network.resetMovies()
+        availableMovies.accept([])
+        favoriteManager.loadFavorites()
+        getUpcomingMovies()
+    }
     
     func getUpcomingMovies(){
+        if requesting.value == false {
         requesting.accept(true)
         network.getMovies {[weak self] value, error in
             guard let self = self else {return}
             self.requesting.accept(false)
             self.addNewMoviesToTheList(newMovies: value)
+        }
         }
     }
     func addNewMoviesToTheList(newMovies : [Movie]) {

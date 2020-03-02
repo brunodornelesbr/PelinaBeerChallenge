@@ -8,11 +8,16 @@
 
 import UIKit
 import AlamofireImage
+import RxSwift
 class MoviesCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var posterImageView: UIImageView!
     @IBOutlet weak var posterLabel: UILabel!
     @IBOutlet weak var favoriteButton: UIButton!
-    
+    var disposeBag = DisposeBag()
+    override func prepareForReuse() {
+        super.prepareForReuse()
+         disposeBag = DisposeBag()
+    }
         static var reuseId = "MoviesCollectionViewCell"
         static var nibName = "MoviesCollectionViewCell"
         func bindTo(movie : Movie){

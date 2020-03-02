@@ -10,8 +10,15 @@ import UIKit
 
 protocol MoviesNetwork {
     func getMovies(completionHandler : @escaping ([Movie],Error?)->())
+    func resetMovies()
 }
 class BestMoviesNetworkImpl: MoviesNetwork {
+    func resetMovies() {
+        currentPage = 0
+        maxPages = Int.max
+        requesting = false
+    }
+    
     
     private var currentPage = 0
     private var maxPages = Int.max

@@ -19,9 +19,11 @@ class BestMoviesViewController: UIViewController {
         collectionViewRxSetup()
         // Do any additional setup after loading the view.
     }
+
     
     override func viewWillAppear(_ animated: Bool) {
            self.navigationController?.navigationBar.prefersLargeTitles = true
+          viewModel.resetMovies()
        }
        
     func collectionViewRxSetup() {
@@ -49,12 +51,12 @@ class BestMoviesViewController: UIViewController {
                 index,model,cell in
                 cell.bindTo(movie: model)
                 cell.setFavorite(self.viewModel.checkIfIsFavorite(movie: model))
-                cell.favoriteButton.rx.tap.subscribe(onNext : {[weak self]
-                    _ in
+                cell.favoriteButton.rx.tap.asDriver().drive(onNext : {[weak self]
+                    value in
                     guard let self = self else {return}
                     self.viewModel.didToggleFavorite(movie: model)
                     self.moviesCollectionView.reloadItems(at: [self.viewModel.indexPathFor(movie: model)])
-                }).disposed(by: self.bag)
+                }).disposed(by: cell.disposeBag)
             }.disposed(by: bag)
             
             moviesCollectionView.rx.itemSelected.subscribe(onNext: {[weak self] value in
