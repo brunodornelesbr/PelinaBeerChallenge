@@ -9,15 +9,24 @@
 import UIKit
 import RxSwift
 import RxCocoa
+
+enum FilteringOptions : String {
+    case name = "Name"
+    case releaseDate = "Release Date"
+    case score = "Score"
+}
 class BestMoviesViewModel: NSObject {
     private var availableMovies = BehaviorRelay<[Movie]>(value : [])
     private var requesting = BehaviorRelay<Bool>(value: false)
     var movies : Observable<[Movie]> {return availableMovies.asObservable()}
     var network : MoviesNetwork
     var favoriteManager : FavoriteManager
-    init(network : MoviesNetwork,favoriteManager : FavoriteManager) {
+    weak var coordinator : MoviesCoordinator?
+    var options = BehaviorRelay<[FilteringOptions]>(value: [FilteringOptions.name,FilteringOptions.releaseDate,FilteringOptions.score]) 
+    init(network : MoviesNetwork,favoriteManager : FavoriteManager, coordinator : MoviesCoordinator) {
         self.network = network
         self.favoriteManager = favoriteManager
+        self.coordinator = coordinator
         super.init()
     }
     func resetMovies() {
@@ -52,7 +61,7 @@ class BestMoviesViewModel: NSObject {
     
     func didSelectMovieAt(indexPath : IndexPath){
         let movie = availableMovies.value[indexPath.row]
-        // router.routeToDetailsMovie(movie : movie)
+        coordinator?.showDetails(movie:movie)
     }
     
     func checkIfIsFavorite(movie : Movie) -> Bool{
@@ -66,5 +75,13 @@ class BestMoviesViewModel: NSObject {
     func indexPathFor(movie : Movie) -> IndexPath {
         let row = availableMovies.value.firstIndex(of: movie) ?? 0
         return IndexPath(row: row, section: 0)
+    }
+    
+    func didSelect(segmentControlIndex : Int) {
+        let option = options.value[segmentControlIndex]
+        let filter = MovieFilter()
+        let orderedMovies =  filter.filterBy(option: option, movies: availableMovies.value)
+        availableMovies.accept(orderedMovies)
+        
     }
 }

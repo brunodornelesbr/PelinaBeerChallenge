@@ -14,8 +14,9 @@ class Movie: Mappable, Codable {
     var posterPath : String?
     var backdropPath : String?
     var genres = ""
-    var releaseDate : Date?
+    var releaseDate : Date!
     var overview = ""
+    var voteAverage : Double = 0.0
     required convenience init?(map: Map) {
         self.init()
     }
@@ -28,10 +29,10 @@ class Movie: Mappable, Codable {
         overview <- map["overview"]
         var genreIds = [Int]()
         genreIds <- map["genre_ids"]
-        
+        voteAverage <- map["vote_average"]
         var release = ""
         release<-map["release_date"]
-        releaseDate = DateFormatter.formatFromAPI(string: release)
+        releaseDate = DateFormatter.formatFromAPI(string: release) ?? Date()
     }
     
     func getPosterURL()->URL?{
