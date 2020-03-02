@@ -27,7 +27,9 @@ class MoviesCoordinator: Coordinator {
     
     func showDetails(movie : Movie) {
         let vc = instantiateInitialVCFromStoryboard(storyboardName: "DetailsMovie") as! DetailsMovieViewController
-        let viewModel = DetailMovieViewModel(movie: movie)
+         let storageManager = FavoriteStorageManagerImpl()
+        let favoriteManager = FavoriteManager(storageManager: storageManager)
+        let viewModel = DetailMovieViewModel(movie: movie, favoriteManager: favoriteManager)
         vc.model = viewModel
         navigationController.pushViewController(vc, animated: true)
     }

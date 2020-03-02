@@ -11,7 +11,9 @@ import RxCocoa
 import RxSwift
 class DetailMovieViewModel {
     var movie = BehaviorRelay<Movie>(value : Movie())
-    init(movie : Movie) {
+    var favoriteManager : FavoriteManager
+    init(movie : Movie,favoriteManager : FavoriteManager) {
         self.movie.accept(movie)
+        self.favoriteManager = favoriteManager
     }
 }
